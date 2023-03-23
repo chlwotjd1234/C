@@ -3,8 +3,7 @@
   -- c언어 연산자
   - 4주차 실습
 
-```
-
+```c
 #include <stdio.h>
 
 int main()
