@@ -1,3 +1,5 @@
+연도 윤년 판단 코드
+
 #include <stdio.h>
 
 int main(void)
@@ -18,3 +20,60 @@ int main(void)
     }
     return 0;
 }
+
+원화 환율화 코드
+
+#include <stdio.h>
+
+int main(void)
+{
+    double rate;
+    double usd;
+    int krw;
+
+    printf("환율을 입력하시오: ");
+    scanf("%lf",&rate);
+    printf("원화 금액을 입력하시오: ");
+    scanf("%d",&krw);
+
+    usd = krw / rate;
+
+    printf("원화 %d원은 %f달러입니다.",krw,usd);
+
+    return 0;
+}
+
+비트 연산 10진수 -> 2진수 코드 공부
+
+(answer)
+
+#include<stdio.h>
+int main(void)
+{
+unsigned int num;
+printf("10진수: ");
+scanf("%u", &num);
+unsigned int mask = 1 << 7; // mask = 10000000
+printf("2진수: ");
+((num & mask) == 0) ? printf("0") : printf("1");
+mask = mask >> 1;// 오른쪽으로 1비트 이동한다.
+((num & mask) == 0) ? printf("0") : printf("1");
+mask = mask >> 1;// 오른쪽으로 1비트 이동한다.
+((num & mask) == 0) ? printf("0") : printf("1");
+mask = mask >> 1;// 오른쪽으로 1비트 이동한다.
+((num & mask) == 0) ? printf("0") : printf("1");
+mask = mask >> 1;
+((num & mask) == 0) ? printf("0") : printf("1");
+mask = mask >> 1;
+((num & mask) == 0) ? printf("0") : printf("1");
+mask = mask >> 1;
+((num & mask) == 0) ? printf("0") : printf("1");
+mask = mask >> 1;
+((num & mask) == 0) ? printf("0") : printf("1");
+printf("\n");
+return 0;
+}
+
+
+
+
